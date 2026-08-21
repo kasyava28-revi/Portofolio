@@ -41,7 +41,17 @@ nav .menu ul li a {
     color: white;
 }
 .tombol-menu {
-    display: none;
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.tombol-menu .garis {
+    height: 3px;
+    background-color: #dad7cd;
 }
 /* ==========================================
    3. HEADER / HERO SECTION
@@ -198,12 +208,27 @@ footer p {
    7. RESPONSIVE DESIGN (Tampilan Mobile)
    ========================================== */
 @media (max-width: 600px) {
-    nav ul {
+    nav .menu ul {
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         flex-direction: column;
-        gap: 10px;
-        align-items: center;
     }
-    
+    nav .menu ul li {
+        width: 100%;
+        border-bottom: 0px solid #ccc;
+        background-color: #dad7cd;
+        line-height: 40px;
+    }
+    nav .menu ul li a {
+        color: #333
+    }
+    .tombol-menu {
+        display: flex;
+    }
     .intro h1 {
         font-size: 1.8rem;
     }
